@@ -99,10 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				4A79B74B222B9247003ED4F9 /* AppDelegate.swift */,
-				4A79B74D222B9247003ED4F9 /* ViewController.swift */,
-				4A79B74F222B9247003ED4F9 /* Main.storyboard */,
+				4A79B76D222B944D003ED4F9 /* Models */,
+				4A79B76B222B9408003ED4F9 /* Controllers */,
+				4A79B76C222B943C003ED4F9 /* Views */,
 				4A79B752222B9247003ED4F9 /* Assets.xcassets */,
-				4A79B754222B9247003ED4F9 /* LaunchScreen.storyboard */,
 				4A79B757222B9247003ED4F9 /* Info.plist */,
 			);
 			path = "Job Finder";
@@ -117,6 +117,30 @@
 			path = "Job FinderTests";
 			sourceTree = "<group>";
 		};
+		4A79B76B222B9408003ED4F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A79B74D222B9247003ED4F9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4A79B76C222B943C003ED4F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A79B754222B9247003ED4F9 /* LaunchScreen.storyboard */,
+				4A79B74F222B9247003ED4F9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A79B76D222B944D003ED4F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		80540CCAAD97B2CBA766C743 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +149,6 @@
 				75C476556C3624C95218776B /* Pods-Job FinderTests.debug.xcconfig */,
 				96CBF01A9148BBE30379130B /* Pods-Job FinderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

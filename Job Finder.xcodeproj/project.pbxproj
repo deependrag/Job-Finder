@@ -16,6 +16,9 @@
 		4A79B761222B9248003ED4F9 /* Job_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B760222B9248003ED4F9 /* Job_FinderTests.swift */; };
 		4A79B770222B9678003ED4F9 /* CustomCellForJobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B76E222B9678003ED4F9 /* CustomCellForJobList.swift */; };
 		4A79B771222B9678003ED4F9 /* CustomCellForJobList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A79B76F222B9678003ED4F9 /* CustomCellForJobList.xib */; };
+		4A79B775222BA193003ED4F9 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B774222BA193003ED4F9 /* Github.swift */; };
+		4A79B777222BA1A7003ED4F9 /* SearchGov.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B776222BA1A7003ED4F9 /* SearchGov.swift */; };
+		4A79B779222BA1BC003ED4F9 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B778222BA1BC003ED4F9 /* JobModel.swift */; };
 		C6A2BC2231B067B5AFA44A10 /* Pods_Job_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3804BADCEC5D63609DB465DD /* Pods_Job_Finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		4A79B762222B9248003ED4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A79B76E222B9678003ED4F9 /* CustomCellForJobList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellForJobList.swift; sourceTree = "<group>"; };
 		4A79B76F222B9678003ED4F9 /* CustomCellForJobList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellForJobList.xib; sourceTree = "<group>"; };
+		4A79B774222BA193003ED4F9 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
+		4A79B776222BA1A7003ED4F9 /* SearchGov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGov.swift; sourceTree = "<group>"; };
+		4A79B778222BA1BC003ED4F9 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		5674BA7DD29347CB7C956256 /* Pods_Job_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Job_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C476556C3624C95218776B /* Pods-Job FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Job FinderTests.debug.xcconfig"; path = "Target Support Files/Pods-Job FinderTests/Pods-Job FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		96CBF01A9148BBE30379130B /* Pods-Job FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Job FinderTests.release.xcconfig"; path = "Target Support Files/Pods-Job FinderTests/Pods-Job FinderTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +148,8 @@
 		4A79B76D222B944D003ED4F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4A79B778222BA1BC003ED4F9 /* JobModel.swift */,
+				4A79B773222BA171003ED4F9 /* Job Providers */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +161,15 @@
 				4A79B76F222B9678003ED4F9 /* CustomCellForJobList.xib */,
 			);
 			path = "Custom Table Cell";
+			sourceTree = "<group>";
+		};
+		4A79B773222BA171003ED4F9 /* Job Providers */ = {
+			isa = PBXGroup;
+			children = (
+				4A79B774222BA193003ED4F9 /* Github.swift */,
+				4A79B776222BA1A7003ED4F9 /* SearchGov.swift */,
+			);
+			path = "Job Providers";
 			sourceTree = "<group>";
 		};
 		80540CCAAD97B2CBA766C743 /* Pods */ = {
@@ -373,9 +390,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A79B777222BA1A7003ED4F9 /* SearchGov.swift in Sources */,
 				4A79B74E222B9247003ED4F9 /* ViewController.swift in Sources */,
 				4A79B74C222B9247003ED4F9 /* AppDelegate.swift in Sources */,
+				4A79B775222BA193003ED4F9 /* Github.swift in Sources */,
 				4A79B770222B9678003ED4F9 /* CustomCellForJobList.swift in Sources */,
+				4A79B779222BA1BC003ED4F9 /* JobModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

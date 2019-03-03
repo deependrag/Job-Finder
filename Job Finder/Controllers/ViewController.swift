@@ -281,8 +281,23 @@ class ViewController: UIViewController {
             
             jobsArray.append(job)
         }
+        
+        // Checks if job list is empty or not. If it is empty then table view shows "No job available"
+        if jobsArray.count == 0 {
+            let noDataLabel: UILabel     = UILabel(frame: CGRect(x: 0, y: 0, width: jobListTableView.bounds.size.width, height: jobListTableView.bounds.size.height))
+            noDataLabel.text          = "No job available"
+            noDataLabel.textColor     = UIColor.black
+            noDataLabel.textAlignment = .center
+            jobListTableView.backgroundView  = noDataLabel
+            jobListTableView.separatorStyle  = .none
+            
+        }else{
+            jobListTableView.backgroundView = nil
+        }
+        
         jobListTableView.reloadData()
     }
+    
     
     //MARK: - Date formatter
     
@@ -378,6 +393,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, UISearchBa
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return jobsArray.count
     }
+    
     
     
     //MARK: - Picker View Delegate Methods

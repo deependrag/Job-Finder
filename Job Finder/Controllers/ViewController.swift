@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     var titleFilterText : String?
     var webViewController = TOWebViewController()
     let pickJobProvider = UIPickerView()
+    let refreshButton : UIButton = UIButton(type: UIButton.ButtonType.custom)
     let dimView = UIView()
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -76,7 +77,10 @@ class ViewController: UIViewController {
         searchController.searchBar.placeholder = "Job Position"
         searchController.hidesNavigationBarDuringPresentation = false
         
-        
+        //Refresh button setup
+        refreshButton.frame = CGRect(x: view.frame.size.width / 2 - 40 , y: view.frame.size.height - 100, width: 80, height: 80)
+        refreshButton.setImage(UIImage(named: "refresh-btn"), for: .normal)
+        refreshButton.addTarget(self, action: #selector(ViewController.refreshButtonPressed), for: .touchUpInside)
         
         //Request Jobs From All Providers
         requestJobsFromAllProviders()
@@ -101,7 +105,7 @@ class ViewController: UIViewController {
     
     func filterJobListWithParameter() {
         // Clears the jobArray
-        jobsArray = [JobModel]()
+        jobsArray.removeAll()
         
         if selectedJobProvider == jobProviders[1] {
             // Request Jobs from only Github
@@ -285,6 +289,8 @@ class ViewController: UIViewController {
                 }else {
                     self.labelForTableViewBackground(text: "Oops! No Internet Connection")
                 }
+                
+                self.view.addSubview(self.refreshButton) // Adds Refresh button to view
                 SVProgressHUD.dismiss()
                 self.jobListTableView.reloadData()
                 print("Error occured parsing data")
@@ -333,7 +339,7 @@ class ViewController: UIViewController {
         }
         
         // Checks if job list is empty or not. If it is empty then table view shows "No job available"
-        if jobsArray.count == 0 {
+        if jobsArray.isEmpty {
             labelForTableViewBackground(text: "No job available")
         }else {
             jobListTableView.backgroundView = nil
@@ -363,6 +369,11 @@ class ViewController: UIViewController {
     }
     
     
+    /// Reload the table view and Removes refresh button from the view
+    @objc func refreshButtonPressed() {
+        refreshButton.removeFromSuperview()
+        filterJobListWithParameter()
+    }
     
     //MARK: - Date formatter
     
@@ -446,7 +457,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, UISearchBa
     //MARK: - Table view Delegate Methods
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCellForJobList", for: indexPath) as! CustomCellForJobList
-        if jobsArray.count != 0 {
+        if !jobsArray.isEmpty {
             cell.jobTitleLabel.text = jobsArray[indexPath.row].jobTitle
             cell.companyNameLabel.text = jobsArray[indexPath.row].companyName
             cell.companyLocationLabel.text = jobsArray[indexPath.row].companyLocation

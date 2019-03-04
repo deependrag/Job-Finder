@@ -381,7 +381,6 @@ class ViewController: UIViewController {
     
 }
 
-//MARK: - Extension for other Class
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIPickerViewDelegate, UIPickerViewDataSource, GMSAutocompleteViewControllerDelegate {
     

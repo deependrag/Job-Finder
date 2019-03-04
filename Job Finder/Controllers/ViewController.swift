@@ -81,7 +81,6 @@ class ViewController: UIViewController {
         //Request Jobs From All Providers
         requestJobsFromAllProviders()
         
-        
     }
     
     
@@ -280,9 +279,16 @@ class ViewController: UIViewController {
             if response.result.isSuccess {
                 self.updateJobsModel(withData: JSON(response.result.value!), provider: jobProvider)
             }else {
+                //Checks if internet connection is available or not
+                if NetworkReachabilityManager()!.isReachable {
+                    self.labelForTableViewBackground(text: "Oops! Something went wrong")
+                }else {
+                    self.labelForTableViewBackground(text: "Oops! No Internet Connection")
+                }
+                SVProgressHUD.dismiss()
+                self.jobListTableView.reloadData()
                 print("Error occured parsing data")
             }
-            SVProgressHUD.dismiss()
         }
     }
     
@@ -327,24 +333,33 @@ class ViewController: UIViewController {
         }
         
         // Checks if job list is empty or not. If it is empty then table view shows "No job available"
-        noDataInTableViewLabel()
+        if jobsArray.count == 0 {
+            labelForTableViewBackground(text: "No job available")
+        }else {
+            jobListTableView.backgroundView = nil
+        }
         
         jobListTableView.reloadData()
+        SVProgressHUD.dismiss()
     }
     
     
-    /// Checks if job list is empty or not. If it is empty then table view shows "No job available"
-    func noDataInTableViewLabel() {
-        if jobsArray.count == 0 {
-            let noDataLabel: UILabel     = UILabel(frame: CGRect(x: 0, y: 0, width: jobListTableView.bounds.size.width, height: jobListTableView.bounds.size.height))
-            noDataLabel.text          = "No job available"
-            noDataLabel.textColor     = UIColor.black
-            noDataLabel.textAlignment = .center
-            jobListTableView.backgroundView  = noDataLabel
-            
-        }else{
-            jobListTableView.backgroundView = nil
-        }
+    /**
+     Shows label in table view background
+     
+     It takes string value as parameter and displays that text in table view background
+     
+    - Parameter label: String that is displayed in table view background
+     ## Usage Example ##
+     ````
+     labelForTableViewBackground(label: "No Internet Connection")
+     */
+    func labelForTableViewBackground(text label: String) {
+        let noDataLabel: UILabel     = UILabel(frame: CGRect(x: 0, y: 0, width: jobListTableView.bounds.size.width, height: jobListTableView.bounds.size.height))
+        noDataLabel.text          = label
+        noDataLabel.textColor     = UIColor.black
+        noDataLabel.textAlignment = .center
+        jobListTableView.backgroundView  = noDataLabel
     }
     
     

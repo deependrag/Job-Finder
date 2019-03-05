@@ -147,6 +147,7 @@ class ViewController: UIViewController {
         
     }
     
+    
     /**
      Request Jobs from Search Gov with or without any parameter
      

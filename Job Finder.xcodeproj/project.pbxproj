@@ -13,12 +13,12 @@
 		4A79B751222B9247003ED4F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A79B74F222B9247003ED4F9 /* Main.storyboard */; };
 		4A79B753222B9247003ED4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A79B752222B9247003ED4F9 /* Assets.xcassets */; };
 		4A79B756222B9247003ED4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A79B754222B9247003ED4F9 /* LaunchScreen.storyboard */; };
-		4A79B761222B9248003ED4F9 /* Job_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B760222B9248003ED4F9 /* Job_FinderTests.swift */; };
 		4A79B770222B9678003ED4F9 /* CustomCellForJobList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B76E222B9678003ED4F9 /* CustomCellForJobList.swift */; };
 		4A79B771222B9678003ED4F9 /* CustomCellForJobList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A79B76F222B9678003ED4F9 /* CustomCellForJobList.xib */; };
 		4A79B775222BA193003ED4F9 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B774222BA193003ED4F9 /* Github.swift */; };
 		4A79B777222BA1A7003ED4F9 /* SearchGov.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B776222BA1A7003ED4F9 /* SearchGov.swift */; };
 		4A79B779222BA1BC003ED4F9 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79B778222BA1BC003ED4F9 /* JobModel.swift */; };
+		4AD8B39E222E362C0017F3B8 /* JobFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD8B39D222E362C0017F3B8 /* JobFinderTests.swift */; };
 		C6A2BC2231B067B5AFA44A10 /* Pods_Job_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3804BADCEC5D63609DB465DD /* Pods_Job_Finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,13 +42,13 @@
 		4A79B755222B9247003ED4F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A79B757222B9247003ED4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A79B75C222B9248003ED4F9 /* Job FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Job FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A79B760222B9248003ED4F9 /* Job_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job_FinderTests.swift; sourceTree = "<group>"; };
 		4A79B762222B9248003ED4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A79B76E222B9678003ED4F9 /* CustomCellForJobList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellForJobList.swift; sourceTree = "<group>"; };
 		4A79B76F222B9678003ED4F9 /* CustomCellForJobList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellForJobList.xib; sourceTree = "<group>"; };
 		4A79B774222BA193003ED4F9 /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
 		4A79B776222BA1A7003ED4F9 /* SearchGov.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGov.swift; sourceTree = "<group>"; };
 		4A79B778222BA1BC003ED4F9 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		4AD8B39D222E362C0017F3B8 /* JobFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobFinderTests.swift; sourceTree = "<group>"; };
 		5674BA7DD29347CB7C956256 /* Pods_Job_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Job_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C476556C3624C95218776B /* Pods-Job FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Job FinderTests.debug.xcconfig"; path = "Target Support Files/Pods-Job FinderTests/Pods-Job FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		96CBF01A9148BBE30379130B /* Pods-Job FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Job FinderTests.release.xcconfig"; path = "Target Support Files/Pods-Job FinderTests/Pods-Job FinderTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 		4A79B75F222B9248003ED4F9 /* Job FinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				4A79B760222B9248003ED4F9 /* Job_FinderTests.swift */,
 				4A79B762222B9248003ED4F9 /* Info.plist */,
+				4AD8B39D222E362C0017F3B8 /* JobFinderTests.swift */,
 			);
 			path = "Job FinderTests";
 			sourceTree = "<group>";
@@ -240,6 +240,7 @@
 					};
 					4A79B75B222B9248003ED4F9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 4A79B747222B9247003ED4F9;
 					};
 				};
@@ -403,7 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A79B761222B9248003ED4F9 /* Job_FinderTests.swift in Sources */,
+				4AD8B39E222E362C0017F3B8 /* JobFinderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +598,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JU2AV96TM4;
 				INFOPLIST_FILE = "Job FinderTests/Info.plist";
@@ -607,6 +609,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deepbhai.Job-FinderTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Job Finder.app/Job Finder";
@@ -619,6 +622,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JU2AV96TM4;
 				INFOPLIST_FILE = "Job FinderTests/Info.plist";
